@@ -30,9 +30,9 @@ import re
 
 user_sex = input("Sexo del usuario (M-F): ")
 user_name = input("Nombre del usuario (M-F): ")
-regexp_f = r"A-L"
-regexp_m = r"A-M"
-result_f = True if re.search(regexp_f,user_name[0], re.IGNORECASE) else False
+regexp_f = r"^[A-L]"
+regexp_m = r"^[A-M]"
+result_f = True if re.search(regexp_f,user_name.split()[0], re.IGNORECASE) else False
 result_m = True if re.search(regexp_m,user_name.split()[0], re.IGNORECASE) else False
 if result_f and user_sex.lower() == "f":
     print("Perteneces al grupo A")
