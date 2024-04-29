@@ -10,8 +10,8 @@ while True:
             break
     except ValueError:
         lista.append(inp)
-result = [f"{lista.index(i)}) {i}" for i in lista] if len(lista) > 0 else "No hay materias :("
-print("Materias almacenadas:\n", [i for i in result])
+result = [f"{lista.index(i)+1}) {i}" for i in lista] if len(lista) > 0 else "No hay materias :("
+print("Materias almacenadas:\n", result)
 
 # EJ2
 # Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
