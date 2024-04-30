@@ -127,8 +127,22 @@ print(res) """
 # EJ7
 # Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo
 
+""" palabra = input("Ingrese palabra \"Palindroma\": ").lower()
+palabra_b = list(palabra)
+palabra_b.reverse()
+palabra_b = "".join(palabra_b)
+res = f"{palabra.upper()} es palindroma." if palabra == palabra_b else f"{palabra.upper()} NO es palindroma."
+print (res) """
+
 # EJ8
 # Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+
+vowels = ["a", "e", "i", "o", "u"]
+counter = [0] * len(vowels)
+prompt = input("Palabra a contar sus vocales: ").lower()
+for vowel in vowels:
+    for e in prompt:
+        counter[vowels.index(vowel)] += 1 if e == vowel else None
 
 # EJ9
 # Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, y muestre por pantalla el menor y el mayor de los precios.
