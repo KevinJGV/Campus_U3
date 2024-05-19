@@ -1,0 +1,219 @@
+[
+    {
+        "Código Observatorio": "302",
+        "Nombre Observatorio": "Tunja",
+        "Fecha Registro": "23/07/2024",
+        "Temperatura Máxima (°C)": "19",
+        "Temperatura Mínima (°C)": "9"
+    },
+    {
+        "Código Observatorio": "101",
+        "Nombre Observatorio": "Bogotá",
+        "Fecha Registro": "04/05/2024",
+        "Temperatura Máxima (°C)": "17",
+        "Temperatura Mínima (°C)": "7"
+    },
+    {
+        "Código Observatorio": "103",
+        "Nombre Observatorio": "Cali",
+        "Fecha Registro": "03/05/2024",
+        "Temperatura Máxima (°C)": "29",
+        "Temperatura Mínima (°C)": "19"
+    },
+    {
+        "Código Observatorio": "106",
+        "Nombre Observatorio": "Bucaramanga",
+        "Fecha Registro": "01/05/2024",
+        "Temperatura Máxima (°C)": "28",
+        "Temperatura Mínima (°C)": "18"
+    },
+    {
+        "Código Observatorio": "207",
+        "Nombre Observatorio": "Valledupar",
+        "Fecha Registro": "04/05/2024",
+        "Temperatura Máxima (°C)": "34",
+        "Temperatura Mínima (°C)": "26"
+    },
+    {
+        "Código Observatorio": "304",
+        "Nombre Observatorio": "Sincelejo",
+        "Fecha Registro": "18/05/2024",
+        "Temperatura Máxima (°C)": "32",
+        "Temperatura Mínima (°C)": "23"
+    },
+    {
+        "Código Observatorio": "201",
+        "Nombre Observatorio": "Pereira",
+        "Fecha Registro": "04/05/2024",
+        "Temperatura Máxima (°C)": "25",
+        "Temperatura Mínima (°C)": "15"
+    },
+    {
+        "Código Observatorio": "310",
+        "Nombre Observatorio": "Mocoa",
+        "Fecha Registro": "27/02/2024",
+        "Temperatura Máxima (°C)": "25",
+        "Temperatura Mínima (°C)": "15"
+    },
+    {
+        "Código Observatorio": "105",
+        "Nombre Observatorio": "Cartagena",
+        "Fecha Registro": "02/05/2024",
+        "Temperatura Máxima (°C)": "30",
+        "Temperatura Mínima (°C)": "22"
+    },
+    {
+        "Código Observatorio": "209",
+        "Nombre Observatorio": "Armenia",
+        "Fecha Registro": "05/05/2024",
+        "Temperatura Máxima (°C)": "24",
+        "Temperatura Mínima (°C)": "14"
+    },
+    {
+        "Código Observatorio": "204",
+        "Nombre Observatorio": "Villavicencio",
+        "Fecha Registro": "03/05/2024",
+        "Temperatura Máxima (°C)": "30",
+        "Temperatura Mínima (°C)": "22"
+    },
+    {
+        "Código Observatorio": "306",
+        "Nombre Observatorio": "Montería",
+        "Fecha Registro": "15/09/2023",
+        "Temperatura Máxima (°C)": "33",
+        "Temperatura Mínima (°C)": "24"
+    },
+    {
+        "Código Observatorio": "102",
+        "Nombre Observatorio": "Medellín",
+        "Fecha Registro": "01/05/2024",
+        "Temperatura Máxima (°C)": "26",
+        "Temperatura Mínima (°C)": "15"
+    },
+    {
+        "Código Observatorio": "305",
+        "Nombre Observatorio": "Riohacha",
+        "Fecha Registro": "30/01/2024",
+        "Temperatura Máxima (°C)": "30",
+        "Temperatura Mínima (°C)": "22"
+    },
+    {
+        "Código Observatorio": "303",
+        "Nombre Observatorio": "Popayán",
+        "Fecha Registro": "06/12/2023",
+        "Temperatura Máxima (°C)": "21",
+        "Temperatura Mínima (°C)": "11"
+    },
+    {
+        "Código Observatorio": "208",
+        "Nombre Observatorio": "Neiva",
+        "Fecha Registro": "05/05/2024",
+        "Temperatura Máxima (°C)": "28",
+        "Temperatura Mínima (°C)": "18"
+    },
+    {
+        "Código Observatorio": "203",
+        "Nombre Observatorio": "Santa Marta",
+        "Fecha Registro": "04/05/2024",
+        "Temperatura Máxima (°C)": "34",
+        "Temperatura Mínima (°C)": "26"
+    },
+    {
+        "Código Observatorio": "205",
+        "Nombre Observatorio": "Pasto",
+        "Fecha Registro": "04/05/2024",
+        "Temperatura Máxima (°C)": "19",
+        "Temperatura Mínima (°C)": "9"
+    },
+    {
+        "Código Observatorio": "301",
+        "Nombre Observatorio": "Cartago",
+        "Fecha Registro": "11/03/2024",
+        "Temperatura Máxima (°C)": "27",
+        "Temperatura Mínima (°C)": "16"
+    },
+    {
+        "Código Observatorio": "106",
+        "Nombre Observatorio": "Bucaramanga",
+        "Fecha Registro": "02/05/2024",
+        "Temperatura Máxima (°C)": "27",
+        "Temperatura Mínima (°C)": "17"
+    },
+    {
+        "Código Observatorio": "202",
+        "Nombre Observatorio": "Manizales",
+        "Fecha Registro": "03/05/2024",
+        "Temperatura Máxima (°C)": "22",
+        "Temperatura Mínima (°C)": "12"
+    },
+    {
+        "Código Observatorio": "308",
+        "Nombre Observatorio": "Florencia",
+        "Fecha Registro": "20/11/2023",
+        "Temperatura Máxima (°C)": "30",
+        "Temperatura Mínima (°C)": "21"
+    },
+    {
+        "Código Observatorio": "309",
+        "Nombre Observatorio": "Yopal",
+        "Fecha Registro": "08/04/2024",
+        "Temperatura Máxima (°C)": "30",
+        "Temperatura Mínima (°C)": "21"
+    },
+    {
+        "Código Observatorio": "210",
+        "Nombre Observatorio": "Cúcuta",
+        "Fecha Registro": "05/05/2024",
+        "Temperatura Máxima (°C)": "30",
+        "Temperatura Mínima (°C)": "20"
+    },
+    {
+        "Código Observatorio": "306",
+        "Nombre Observatorio": "Montería",
+        "Fecha Registro": "14/09/2023",
+        "Temperatura Máxima (°C)": "34",
+        "Temperatura Mínima (°C)": "25"
+    },
+    {
+        "Código Observatorio": "104",
+        "Nombre Observatorio": "Barranquilla",
+        "Fecha Registro": "02/05/2024",
+        "Temperatura Máxima (°C)": "33",
+        "Temperatura Mínima (°C)": "25"
+    },
+    {
+        "Código Observatorio": "307",
+        "Nombre Observatorio": "Quibdó",
+        "Fecha Registro": "04/06/2024",
+        "Temperatura Máxima (°C)": "28",
+        "Temperatura Mínima (°C)": "19"
+    },
+    {
+        "Código Observatorio": "301",
+        "Nombre Observatorio": "Cartago",
+        "Fecha Registro": "10/03/2024",
+        "Temperatura Máxima (°C)": "28",
+        "Temperatura Mínima (°C)": "17"
+    },
+    {
+        "Código Observatorio": "207",
+        "Nombre Observatorio": "Valledupar",
+        "Fecha Registro": "05/05/2024",
+        "Temperatura Máxima (°C)": "33",
+        "Temperatura Mínima (°C)": "25"
+    },
+    {
+        "Código Observatorio": "303",
+        "Nombre Observatorio": "Popayán",
+        "Fecha Registro": "05/12/2023",
+        "Temperatura Máxima (°C)": "22",
+        "Temperatura Mínima (°C)": "12"
+    },
+    {
+        "Código Observatorio": "301",
+        "Nombre Observatorio": "Cartago",
+        "Fecha Registro": "10/03/2024",
+        "Temperatura Máxima (°C)": "28",
+        "Temperatura Mínima (°C)": "17"
+    }
+]
