@@ -219,8 +219,7 @@ def paginar_res(res):
             line = " | ".join(list(dic.values())) + "\n"
             current_page += line
         print(current_page)
-        print(f"\t< {
-              start} / {end} >\n[0 - Pagina anterior]    [1 - Pagina siguiente]\n[2 - Volver]")
+        print(f"\t< {start} / {end} >\n[0 - Pagina anterior]    [1 - Pagina siguiente]\n[2 - Volver]")
         movimiento = int_val("> ")
         if movimiento == 2:
             break
