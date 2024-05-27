@@ -1,0 +1,36 @@
+{
+    "usuarios":[
+        {
+            "id usuario":1,
+            "id pedidos": ["1-1","1-2"]
+        }
+    ],
+    "pedidos":{
+      "pagados": [
+        {
+            "id pedido": "1-1",
+            "carrito" : [
+                {
+                    "producto" : "Labial",
+                    "nombre" : "Labial 1",
+                    "cantidad" : 3
+                }
+            ],
+            "valor" : 45000
+        }
+      ],
+      "pendientes": [
+        {
+            "id pedido": "1-2",
+            "carrito" : [
+                {
+                    "categoria" : "Labial",
+                    "nombre" : "Labial 1",
+                    "cantidad" : 3
+                }
+            ],
+            "valor" : 45000
+        }
+      ]
+    }
+}
