@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --background_color-gradient-a : #434949;
+            --background_color-gradient-b : #0f1b12;
+            --text_color : #999999;
+            --subtitulos : #6b6b6b
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(to bottom, var(--background_color-gradient-b), var(--background_color-gradient-a));
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .center-container{
+            margin: 10px 10%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            ;
+        }
+        .a {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .a li {
+            list-style: none;
+        }
+        
+        a {
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        a:hover {
+            color: #000;
+            background-color: white;
+        }
+        h1 {
+            align-self: center;
+            color: #fff;
+        }
+        h2 {
+            color: var(--subtitulos);
+        }
+        img{
+            border-radius: 100%;
+            width: 10%;
+        }
+        main{
+            flex-grow: 3;
+        }
+        section p, section ul {
+            margin: 16px 25px;
+            color: var(--text_color);
+        }
+        footer {
+            text-align: center;
+            color:  white;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <div class="top-header">
+            <header>
+                <h1>JJ BENITEZ</h1>
+                <img src="https://avatars.githubusercontent.com/u/85241471?v=4" alt="avatar" srcset="">
+            </header>
+            <nav>
+                <ul class="a">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Sobre Mí</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <section id="presentacion">
+                <h2>Presentacion</h2>
+                <p>Mi nombre completo es Kevin Johan González Velandia.
+                    Soy un desarrollador y diseñador de software Colombiano, Full-Stack.
+                    Doy forma a las marcas digitalmente, fascinado por la intersección de la creatividad y la lógica.
+                    A pesar de lo impresionante de mi portafolio, soy un amante de la simplicidad, el minimalismo y la complejidad de las relaciones interpersonales.
+                    Soy consciente de la importancia de los aspectos técnicos y creativos, siempre en busca de la mejora personal.
+                    Me encanta colaborar en grandes proyectos con gente talentosa e interesante.
+                    ¿Necesitas una mano? Yo tengo dos.</p>
+            </section>
+            <section id="hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Videojuegos</li>
+                    <li>Anime</li>
+                    <li>Compartir con compañeros</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>© Copyright reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
