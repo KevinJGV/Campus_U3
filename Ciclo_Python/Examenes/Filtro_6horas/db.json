@@ -1,0 +1,29 @@
+{
+    "usuarios": [
+        {
+            "id usuario": 1,
+            "id pedidos": [
+                "1-1"
+            ]
+        }
+    ],
+    "pedidos": {
+        "creado": [],
+        "preparacion": [
+            {
+                "id pedido": "1-1",
+                "carrito": [
+                    {
+                        "id": 1,
+                        "nombre": "Papas Fritas",
+                        "precio": 5000,
+                        "cantidad": 1,
+                        "subtotal": 5000
+                    }
+                ],
+                "fecha": "28-05-2024 12:09:21",
+                "valor": 5000
+            }
+        ]
+    }
+}
