@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python segun Juan Mariño</title>
+    <style>
+        :root {
+            --background_color-gradient-a : black;
+            --background_color-gradient-b : rgb(0, 26, 41);
+            --text_color : white;
+            --title_color : #6b6b6b;
+            --subtitulos : #999999
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .gradient-container{
+            height: 98vh;
+            background-image: radial-gradient( var(--background_color-gradient-a), var(--background_color-gradient-b));
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .gradient-container::-webkit-scrollbar {
+            width: 13px;
+        }
+        .gradient-container::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: gray;
+            border: 3px solid var(--background_color-gradient-b) ;
+            margin: 10px;
+        }
+
+        .gradient-container::-webkit-scrollbar-thumb:hover {    
+            background-color: lightgray;
+        }
+
+        .center-container{
+            margin: 10px 10%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            ;
+        }
+        small{
+            font-style: italic;
+            font-size: small;
+        }
+        .a {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .a li {
+            list-style: none;
+        }
+        
+        a {
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        a:hover {
+            color: #000;
+            background-color: white;
+        }
+        h1 {
+            align-self: center;
+            color: white;
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: var(--title_color);
+        }
+
+        h3 {
+            color: var(--subtitulos);
+        }
+        img{
+            width: 10%;
+        }
+        main{
+            flex-grow: 3;
+        }
+
+        .topic {
+            margin: 45px;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .topic:hover{
+            background-image: linear-gradient(to bottom, #ffffff13, #ffffff0e);
+            border-radius: 50px;
+        }
+
+        section p, section ul {
+            margin: 16px 25px;
+            color: var(--text_color);
+        }
+        footer {
+            text-align: center;
+            color:  white;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-container">
+        <div class="center-container">
+            <div class="top-header">
+                <header>
+                    <h1>Python <small>segun Juan Mariño</small></h1>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="avatar" srcset="">
+                </header>
+                <nav>
+                    <ul class="a">
+                        <li><a href="#introduccion">Ir a Introducción</a></li>
+                        <li><a href="#fundamentos">Ir a Fundamentos</a></li>
+                        <li><a href="#conclusion">Ir a Conclusión</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <main>
+                <section id="introduccion" class="segment">
+                    <h2>Introducción a Python</h2>
+                    <div class="topic">
+                        <h3>¿Qué es Python?</h3>
+                        <p>Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Se destaca por su legibilidad y simplicidad.</p>
+                    </div>
+                </section>
+                <section id="fundamentos" class="segment">
+                    <h2>Fundamentos</h2>
+                    <div class="topic">
+                        <h3>Tipos de datos en Python</h3>
+                        <p>Python maneja varios tipos de datos, que incluyen números, cadenas de texto, listas, tuplas, diccionarios, conjuntos y booleanos.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Operadores en Python</h3>
+                        <p>Python utiliza operadores aritméticos, de comparación y lógicos para realizar operaciones y comparaciones.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Control de flujo</h3>
+                        <p>Python utiliza sentencias condicionales y bucles para controlar el flujo de un programa. También se pueden usar las sentencias break, continue y pass para controlar los bucles.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Funciones en Python</h3>
+                        <p>Las funciones en Python se definen con la palabra clave def. Python también permite la creación de funciones anónimas con la palabra clave lambda. Los decoradores permiten modificar el comportamiento de las funciones.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Módulos y paquetes</h3>
+                        <p>Python permite la importación de módulos y paquetes para reutilizar código. La biblioteca estándar de Python contiene una gran cantidad de módulos útiles.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Manejo de excepciones</h3>
+                        <p>Python maneja las excepciones con las palabras clave try y except. Se pueden lanzar excepciones con la palabra clave raise.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Trabajando con archivos</h3>
+                        <p>Python puede leer y escribir archivos. El manejo de archivos con with asegura que el archivo se cierre correctamente después de su uso.</p>
+                    </div>
+                </section>
+                <section id="conclusion" class="segment">
+                    <h2>Conclusión</h2>
+                    <div class="topic">
+                        <p>Después de aprender los fundamentos de Python, se puede profundizar en temas más avanzados como la programación orientada a objetos, las expresiones regulares, la programación de red, la programación de bases de datos, la programación web, la ciencia de datos, el aprendizaje automático, entre otros. Hay muchos recursos en línea gratuitos y de pago para continuar aprendiendo Python.</p>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>© Copyright reserved</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
