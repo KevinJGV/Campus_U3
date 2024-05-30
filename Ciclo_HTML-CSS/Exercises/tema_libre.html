@@ -7,7 +7,7 @@
     <style>
         :root {
             --background_color-gradient-a : black;
-            --background_color-gradient-b : rgb(0, 26, 41);
+            --background_color-gradient-b : rgb(0, 36, 56);
             --text_color : white;
             --title_color : #6b6b6b;
             --subtitulos : #999999
@@ -30,19 +30,22 @@
         }
 
         .gradient-container::-webkit-scrollbar {
-            width: 13px;
+            width: 10px;
         }
         .gradient-container::-webkit-scrollbar-thumb {
             border-radius: 10px;
             background-color: gray;
-            border: 3px solid var(--background_color-gradient-b) ;
-            margin: 10px;
+            border: 3px solid var(--background_color-gradient-b);
         }
 
         .gradient-container::-webkit-scrollbar-thumb:hover {    
             background-color: lightgray;
         }
 
+        .gradient-container::-webkit-scrollbar-thumb:active {    
+            background-color: gray;
+        }
+        
         .center-container{
             margin: 10px 10%;
             height: 100%;
