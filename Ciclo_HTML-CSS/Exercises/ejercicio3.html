@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Libros Online</title>
+    <style>
+        :root {
+            --background_color-gradient-a : black;
+            --background_color-gradient-b : rgb(0, 36, 56);
+            --text_color : white;
+            --title_color : #6b6b6b;
+            --subtitulos : #999999
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .gradient-container{
+            height: 98vh;
+            background-image: radial-gradient( var(--background_color-gradient-a), var(--background_color-gradient-b));
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .gradient-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .gradient-container::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: gray;
+            border: 3px solid var(--background_color-gradient-b);
+        }
+
+        .gradient-container::-webkit-scrollbar-thumb:hover {    
+            background-color: lightgray;
+        }
+
+        .gradient-container::-webkit-scrollbar-thumb:active {    
+            background-color: gray;
+        }
+        
+        .center-container{
+            margin: 10px 10%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .ul-navbar {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        li{
+            list-style: none;
+        }
+        a {
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            
+        }
+        a:hover {
+            color: #000;
+            background-color: white;
+        }
+
+        .path *{
+            color: #ffffff88;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: var(--title_color);
+        }
+
+        .oferta__data {
+            display: flex;
+        }
+        
+        .oferta__data img {
+            width:  300px;
+        }
+
+        .oferta__data__description {
+            margin: 20px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+        p {
+            margin: 0;
+            color: var(--text_color)
+        }
+        .oferta__counter {
+            display: flex;
+            gap: 20px;
+        }
+
+        .oferta__counter div{
+            color: white;
+            background-color: #2b2b2b;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .oferta__counter div:active{
+            background-color: #6b6b6b;
+            box-shadow: 0 5px 20px 0.5px rgba(255, 255, 255, 0.356);            
+        }
+        h3 {
+            color: var(--subtitulos);
+        }
+        #logo{
+            width: 80px;
+        }
+        main{
+            flex-grow: 3;
+        }
+
+        .topic {
+            margin: 45px;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .topic:hover{
+            background-image: linear-gradient(to bottom, #ffffff13, #ffffff0e);
+            border-radius: 50px;
+        }
+
+
+        footer {
+            text-align: center;
+            color:  white;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-container">
+        <div class="center-container">
+            <div class="top-header">
+                <header>
+                    <img id="logo" src="http://virtual.umng.edu.co/distancia/ecosistema/ovas/asso/higiene_y_seguridad_industrial_ii/unidad_3/medios/interactividades/pat4_6/editable/publish/web/images/libro.svg" alt="avatar" srcset="">
+                    <nav>
+                        <ul class="ul-navbar">
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="">Categorías</a></li>
+                            <li><a href="">Ofertas</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <main>
+                <div class="path">
+                    <small><a href="">Ofertas</a>><a href="">Del mes</a></small>
+                </div>
+                <div class="principal-content">
+                    <section id="oferta" class="principal-content__segment">
+                        <h2>El Dragon de Vapor</h2>
+                        <div class="oferta__data">
+                            <img src="https://www.normainfantilyjuvenil.com/co/uploads/2019/01/resized/800_9789580009771.jpg" alt="" srcset="">
+                            <div class="oferta__data__description">
+                                <p>Para Márkel, los dragones solo eran criaturas legendarias que aparecían en las historias de los juglares. Pero cuando los caballeros de la Ciudad de Hierro atacan su aldea y se llevan a su padre, Márkel deberá emprender un peligroso viaje hasta los confines del mundo en busca del último de los dragones, con la esperanza de que lo ayude a liberar a su padre. Este emocionante relato de fantasía transporta a un mundo lleno de criaturas extrañas, amigos inseparables y sorprendentes aventuras. Obra en el marco del conocido género de fantasía épica.</p>
+                                <div class="oferta__compra">
+                                    <div class="oferta__counter">
+                                        <div class="button-more">+</div>
+                                        <input type="text">
+                                        <div class="button-less">-</div>
+                                    </div>
+                                    <button type="submit">COMPRAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="categorias" class="principal-content__segment">
+                        <h2>Categorias</h2>
+                        <div class="categorias__segment">
+                            <h3>Novelas</h3>
+                            <div class="categorias__segment__lista">
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categorias__segment">
+                            <h3>Ciencia Ficción</h3>
+                            <div class="categorias__segment__lista">
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categorias__segment">
+                            <h3>Infantil</h3>
+                            <div class="categorias__segment__lista">
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categorias__segment">
+                            <h3>Educación</h3>
+                            <div class="categorias__segment__lista">
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categorias__segment">
+                            <h3>Tecnología</h3>
+                            <div class="categorias__segment__lista">
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <img src="" alt="">
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer>
+                <div class="contacto">
+                    <div class="contactoA">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="">noseasapo@sapo.com</a></li>
+                            <li><a href="">+57 312 345 67 89</a></li>
+                        </ul>
+                    </div>
+                    <div class="contactoB">
+                        <h4>Encuentranos</h4>
+                        <div class="redes">
+                            <a href=""><img src="../media/facebook.svg" alt="" srcset=""></a>
+                            <a href=""><img src="../media/instagram.svg" alt="" srcset=""></a>
+                            <a href=""><img src="../media/twitter.svg" alt="" srcset=""></a>
+                        </div>
+                    </div>
+                </div>
+                <p>© Copyright reserved</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
