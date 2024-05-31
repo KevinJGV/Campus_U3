@@ -15,16 +15,17 @@
 
         * {
             font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
         }
         .gradient-container{
             height: 98vh;
-            background-image: radial-gradient( var(--background_color-gradient-a), var(--background_color-gradient-b));
+            background-image: linear-gradient( var(--background_color-gradient-a), var(--background_color-gradient-b));
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
             box-sizing: border-box;
             overflow-y: scroll;
-            scroll-behavior: smooth;
+            overflow-x: hidden;
             border-radius: 10px;
             padding: 15px;
         }
@@ -32,20 +33,24 @@
         .gradient-container::-webkit-scrollbar {
             width: 10px;
         }
-        .gradient-container::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background-color: gray;
-            border: 3px solid var(--background_color-gradient-b);
+        
+        *::-webkit-scrollbar {
+            height: 5px;
         }
 
-        .gradient-container::-webkit-scrollbar-thumb:hover {    
+        *::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: gray;  
+        }
+
+        *::-webkit-scrollbar-thumb:hover {    
             background-color: lightgray;
         }
 
-        .gradient-container::-webkit-scrollbar-thumb:active {    
+        *::-webkit-scrollbar-thumb:active {    
             background-color: gray;
         }
-        
+
         .center-container{
             margin: 10px 10%;
             height: 100%;
@@ -63,14 +68,14 @@
             justify-content: space-evenly;
         }
 
-        li{
+        .ul-navbar li{
             list-style: none;
         }
         a {
             color: #fff;
             padding: 5px 10px;
             border-radius: 10px;
-            
+            transition: background-color 0.1s 
         }
         a:hover {
             color: #000;
@@ -103,9 +108,36 @@
             margin: 0;
             color: var(--text_color)
         }
+
+        .oferta__compra button{
+            margin: 10px;
+
+        }
+        .oferta__compra {
+            display: ruby;
+        }
+
+        .oferta__compra * {
+            font-size: 1rem;
+        }
+
+        .oferta__compra button {
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            transition: background-color 0.1s 
+        }
+
+        .oferta__compra button:active {
+            background-color: #ffffff4b;
+        }
         .oferta__counter {
             display: flex;
-            gap: 20px;
+            gap: 10px;
+            cursor: default;
+            user-select: none;
+            align-items: center;
         }
 
         .oferta__counter div{
@@ -114,13 +146,20 @@
             border-radius: 100%;
             width: 40px;
             height: 40px;
-            text-align: center;
             font-size: 35px;
+            text-align: center;
         }
 
         .oferta__counter div:active{
             background-color: #6b6b6b;
             box-shadow: 0 5px 20px 0.5px rgba(255, 255, 255, 0.356);            
+        }
+
+        .oferta__counter input {
+            width: 60px;
+            height: 25px;
+            border-radius: 10px;
+            text-align: center;
         }
         h3 {
             color: var(--subtitulos);
@@ -132,21 +171,74 @@
             flex-grow: 3;
         }
 
-        .topic {
-            margin: 45px;
-            padding: 10px;
-            border-radius: 50px;
+        .categorias__segment__lista {
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            min-height: 200px;
         }
 
-        .topic:hover{
-            background-image: linear-gradient(to bottom, #ffffff13, #ffffff0e);
-            border-radius: 50px;
+        .categorias__segment__lista__item{
+            text-align: center;
         }
 
+        .categorias__segment__lista__item *{
+            padding: 5px;
+            display: block;
+        }
 
+        .categorias__segment__lista__item > a + a {
+            text-decoration: none;
+        } 
+        .item__img img{
+            width: 100px;
+        }
+
+        .item__img img:hover {
+            transform: scale(110%);
+        }
+
+        .item__img:hover {
+            background-color: transparent;
+        }
+
+        hr {
+            width: 100%;
+        }
         footer {
             text-align: center;
             color:  white;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            background-color: transparent;
+            text-decoration: underline;
+            color: #fff;
+        }
+        .contacto {
+            display: flex;
+        }
+
+        .contactoA {
+            flex-grow: 1;
+        }
+
+        .contactoA ul {
+            display: ruby;
+        }
+
+        .contactoB {
+            flex-grow: 1;
+        }
+
+        .redes * {
+            border-radius: 100%;
+            width: 50px;
         }
     </style>
 </head>
@@ -176,12 +268,15 @@
                         <div class="oferta__data">
                             <img src="https://www.normainfantilyjuvenil.com/co/uploads/2019/01/resized/800_9789580009771.jpg" alt="" srcset="">
                             <div class="oferta__data__description">
-                                <p>Para Márkel, los dragones solo eran criaturas legendarias que aparecían en las historias de los juglares. Pero cuando los caballeros de la Ciudad de Hierro atacan su aldea y se llevan a su padre, Márkel deberá emprender un peligroso viaje hasta los confines del mundo en busca del último de los dragones, con la esperanza de que lo ayude a liberar a su padre. Este emocionante relato de fantasía transporta a un mundo lleno de criaturas extrañas, amigos inseparables y sorprendentes aventuras. Obra en el marco del conocido género de fantasía épica.</p>
+                                <div class="oferta__data__info">
+                                    <h3>Descripción</h3>
+                                    <p>Para Márkel, los dragones solo eran criaturas legendarias que aparecían en las historias de los juglares. Pero cuando los caballeros de la Ciudad de Hierro atacan su aldea y se llevan a su padre, Márkel deberá emprender un peligroso viaje hasta los confines del mundo en busca del último de los dragones, con la esperanza de que lo ayude a liberar a su padre. Este emocionante relato de fantasía transporta a un mundo lleno de criaturas extrañas, amigos inseparables y sorprendentes aventuras. Obra en el marco del conocido género de fantasía épica.</p>
+                                </div>
                                 <div class="oferta__compra">
                                     <div class="oferta__counter">
-                                        <div class="button-more">+</div>
+                                        <div class="button-more">-</div>
                                         <input type="text">
-                                        <div class="button-less">-</div>
+                                        <div class="button-less">+</div>
                                     </div>
                                     <button type="submit">COMPRAR</button>
                                 </div>
@@ -194,23 +289,45 @@
                             <h3>Novelas</h3>
                             <div class="categorias__segment__lista">
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                             </div>
@@ -219,23 +336,45 @@
                             <h3>Ciencia Ficción</h3>
                             <div class="categorias__segment__lista">
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                             </div>
@@ -244,23 +383,45 @@
                             <h3>Infantil</h3>
                             <div class="categorias__segment__lista">
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                             </div>
@@ -269,23 +430,45 @@
                             <h3>Educación</h3>
                             <div class="categorias__segment__lista">
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                             </div>
@@ -294,23 +477,45 @@
                             <h3>Tecnología</h3>
                             <div class="categorias__segment__lista">
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                                 <div class="categorias__segment__lista__item">
-                                    <img src="" alt="">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
+                                    <a href="">Luna de pluton</a>
+                                </div>
+                                <div class="categorias__segment__lista__item">
+                                    <a class="item__img" href="">
+                                        <img src="https://planetadelibrosco0.cdnstatics.com/usuaris/libros/fotos/208/m_libros/portada_luna-de-pluton_dross_201510061938.jpg" alt="">
+                                    </a>
                                     <a href="">Luna de pluton</a>
                                 </div>
                             </div>
@@ -318,6 +523,7 @@
                     </section>
                 </div>
             </main>
+            <hr>
             <footer>
                 <div class="contacto">
                     <div class="contactoA">
