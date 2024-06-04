@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --background_color-gradient-a : black;
+            --background_color-gradient-b : rgb(0, 36, 56);
+            --tarjeta_color : rgb(0, 36, 56)
+        }
+
+        @font-face {
+            font-family: "chocolate";
+            src: url(../fonts/Chocolate_Classical_Sans/ChocolateClassicalSans-Regular.ttf);
+        }
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .background-container{
+            height: 98vh;
+            background-image: radial-gradient( var(--background_color-gradient-a), var(--background_color-gradient-b));
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .center-container{
+            margin: 10px 10%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+        .tarjeta {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 35px 70px -30px lightgray;
+        }
+        .body-tarjeta{
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .head-tarjeta  h1 {
+            font-family: "chocolate";
+            font-size: clamp(3rem, 2.0774rem + 3.7936vw, 8rem);
+            margin-block: 20px;
+        }
+        .head-tarjeta {
+            text-align: center;
+        }
+        .logo {
+            min-width: 100px;
+            width: clamp(10%, 3.0774rem + 3.7936vw, 80%);
+            margin: 10px;
+        }
+        q {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: lighter;
+            display: block;
+            text-align: center;
+            margin: 20px;
+            font-size: clamp(0.5rem, 0.5774rem + 1.7936vw, 2rem);
+        }
+        hr{
+            width: 80%;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 15px;
+        }
+        .contacts :first-child:before{
+            content: url(../media/whatsapp-logo-variant.svg);
+            margin-right: 5px;
+        }
+        .contacts :last-child:before{
+            content: url(../media/email.svg);
+            margin-right: 5px;
+        }
+
+        .contacts p {
+            display: flex;
+            align-items: center;
+            font-family:monospace;
+        }
+        .qr {
+            width: clamp(10%, 3.0774rem + 3.7936vw, 80%);
+            height: clamp(10%, 3.0774rem + 3.7936vw, 80%);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="center-container">
+            <div class="tarjeta">
+                <div class="body-tarjeta">
+                    <div class="head-tarjeta">
+                        <h1>Business man</h1>
+                        <img class="logo" src="../media/logo-japo.jpg" alt="">
+                    </div>
+                    <q>Ponte pilas pa los Business</q>
+                </div>
+                <hr>
+                <footer>
+                    <div class="contacts">
+                        <p>+1 1234567890</p>
+                        <p>noseasapo@sapo.frog</p>
+                    </div>
+                    <img src="../media/qr-random.png" alt="" class="qr">
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
