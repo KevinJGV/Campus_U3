@@ -1,0 +1,114 @@
+:root {
+    --bgcolorrow-cover: #dadada50;
+    --bgcolorrow-title: #7e7e7e50;
+    --bgcolorrow-info: #cecece50;
+    --bgcolorrow-a: #e9e9e950;
+    --bgcolorrow-b: #ffffff50;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: lightgray;  
+}
+
+*::-webkit-scrollbar-thumb:hover {    
+    background-color: gray;
+}
+
+*::-webkit-scrollbar-thumb:active {    
+    background-color: rgb(184, 184, 184);
+}
+
+body {
+    display: flex;
+    background-image: url(https://i.redd.it/potn7vwaxyj91.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.glass-material {
+    background-color: #ffffff1e;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+main {
+    flex-grow: 2;
+    height: 93cqh;
+    width: 0;
+    margin: 5px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+aside {
+    flex-grow: 1;
+    height: 100cqh;
+}
+
+#techinc-card {
+    position: fixed;
+    overflow-y: scroll;
+    height: 95cqh;
+    margin-block: 5px;
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+table, tbody, tr{
+    border-collapse: collapse;
+    border: 1px rgba(255, 255, 255, 0.315) solid;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.cover-row {
+    background-color:var(--bgcolorrow-cover);
+}
+
+table img {
+    vertical-align: middle;
+}
+
+.title-row {
+    background-color: var(--bgcolorrow-title);
+}
+
+.info-row {
+    background-color: var(--bgcolorrow-info);
+}
+
+.bg-row-a {
+    background-color: var(--bgcolorrow-a);
+}
+
+.bg-row-b {
+    background-color: var(--bgcolorrow-b);
+}
+
+h1 {
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3rem;
+}
+
