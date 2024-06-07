@@ -45,7 +45,7 @@ body {
 }
 
 main {
-    flex-grow: 2;
+    flex-grow: 10;
     height: 93cqh;
     width: 0;
     margin: 5px;
@@ -53,13 +53,17 @@ main {
     overflow-y: scroll;
 }
 
+.toggle-checkbox{
+    display: none;
+}
+
 aside {
+    display: flex;
     flex-grow: 1;
     height: 100cqh;
 }
 
 #techinc-card {
-    position: fixed;
     overflow-y: scroll;
     height: 95cqh;
     margin-block: 5px;
@@ -112,3 +116,39 @@ h1 {
     font-size: 3rem;
 }
 
+.collapse-card {
+    width: 50px;
+    background-color: goldenrod;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    flex-grow: 1;
+    align-self: center;
+}
+
+@media (min-width:1190px) {
+    .collapse-card {
+        display: none;
+    }
+
+    #techinc-card {
+        display: block;
+    }
+
+}
+
+@media (min-width:320px) and (max-width: 1190px) {
+    aside {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+    }
+
+    #techinc-card {
+        display: none;
+    }
+
+    .toggle-checkbox:checked + label + #techinc-card{
+        display: block;
+    }
+}
