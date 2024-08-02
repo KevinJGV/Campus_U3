@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de cursos interactiva</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js.js"></script>
+</head>
+<body class="flex_col j-all_c">
+    <main class="container">
+        <header>
+            <h1>Plataforma de cursos interactiva</h1>
+            <details>
+                <summary class="pointer"><h2>Agregar nuevo curso</h2></summary>
+                <form class="flex_col">
+                    <h4>Nombre del curso</h4>
+                    <input type="text" name="name" id="name" class="name" placeholder="Mecánica,Alquimia,Magia..." required>
+                    <h4>Descripción</h4>
+                    <textarea name="descr" class="descr" id="descr" cols="30" rows="5" placeholder="Ofrezca una Descripción del curso" required></textarea>
+                    <h4>Contenido</h4>
+                    <textarea name="content" class="content" id="content" cols="30" rows="5" placeholder="Ruta de estudios" required></textarea>
+                </form>
+                <button class="pointer" id="form_button">Agregar curso</button>
+            </details>
+            <details>
+                <summary class="pointer"><h2>Filtrar</h2></summary>
+                <form class="flex_col">
+                    <h4>Nombre del curso</h4>
+                    <input type="text" name="name" id="name_q" class="name" placeholder="Filtrar por nombre" required>
+                    <h4>Descripción</h4>
+                    <input type="text" name="descr_q" id="descr_q" class="descr_q" placeholder="Filtrar por descripción" required>
+                    <h4>Contenido</h4>
+                    <input type="text" name="content_q" id="content_q" class="content_q" placeholder="Filtrar por contenido" required>
+                </form>
+                <button class="pointer" id="form_button_q">Buscar cursos</button>
+                <button class="pointer" id="clear">Limpiar Filtros</button>
+            </details>
+        </header>
+        <section class="flex_wrap j-se">
+        </section>
+    </main>
+</body>
+</html>
