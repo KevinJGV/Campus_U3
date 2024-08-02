@@ -1,0 +1,148 @@
+:root {
+    --COLOR_CELESTE: #6bf5ff;
+    --COLOR_MENTA: #64fda4;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex_col {
+    display: flex;
+    flex-flow: column;
+}
+
+.flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.j-c {
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.j-all_c {
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.j-sa {
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.j-se {
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.j-sb{
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.pointer {
+    user-select: none;
+    cursor: pointer;
+}
+
+.no_select {
+    user-select: none;
+}
+
+.block {
+    display: block;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.2s cubic-bezier(.22, .61, .36, 1);
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+
+main {
+    margin-inline: 15cqw;
+}
+
+details {
+
+}
+
+summary {
+    opacity: 0.65;
+    padding: 15px;
+    border-bottom: 1px black solid;
+}
+
+summary::marker {
+    font-size: 1.5rem;
+}
+
+summary:hover {
+    opacity: 1;
+}
+
+h2 {
+    display: inline;
+}
+
+form button {
+    margin-block: 20px;
+}
+
+h4 {
+    margin-block: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 8px;
+    border: 0;
+    font-size: 1.2rem;
+    background-image: linear-gradient(to right, var(--COLOR_CELESTE), var(--COLOR_MENTA));
+}
+
+button:active {
+    background-image: linear-gradient(to right, var(--COLOR_MENTA), var(--COLOR_CELESTE));
+    transform: scale(0.95);
+}
+
+section {
+    gap: 8px;
+    padding: 10px;
+}
+
+.card {
+    width: 270px;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+h5 {
+    font-weight: 300;
+}
+
+img {
+    width: 250px;
+}
