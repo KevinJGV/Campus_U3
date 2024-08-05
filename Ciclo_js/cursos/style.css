@@ -3,6 +3,10 @@
     --COLOR_MENTA: #64fda4;
 }
 
+.hidden{
+    display: none;
+}
+
 .flex {
     display: flex;
 }

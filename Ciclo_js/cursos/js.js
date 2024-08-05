@@ -6,6 +6,7 @@ const DESCRP_COURSE = document.querySelector("#descr");
 const CONTENT_COURSE = document.querySelector("#content");
 const FORM_BUTTON_CREATE = document.querySelector("#form_button");
 const FORM_BUTTON_FILTER = document.querySelector("#form_button_q");
+const CLEAR_BUTTON = document.querySelector("#clear")
 const SECTION = document.querySelector("section");
 
 async function gettData() {
@@ -20,21 +21,6 @@ async function gettData() {
             resolve();
         }, 1500);
     });
-};
-
-async function gettCards() {
-    return await new Promise((resolve) => {
-        setTimeout(() => {
-            let cards = document.querySelectorAll(".card");
-            const NAME_FILTER = document.querySelector("#name_q");
-            const DESCRP_FILTER = document.querySelector("#descr_q");
-            const CONTENT_FILTER = document.querySelector("#content_q");
-            cards.forEach(card => {
-                AQUI NOS QUEDAMOS
-            })
-            resolve()            
-        }, 1500);
-    })
 };
 
 function card_constructor() {
@@ -60,14 +46,12 @@ function card_constructor() {
         IMG.src = "https://cdn-icons-png.flaticon.com/512/3426/3426653.png";
         IMG.classList.add("text_center");
         IMG_BOX.insertAdjacentElement("beforeend", IMG);
-        const DESCRIPTION_p = document.createElement("p");
-        DESCRIPTION_p.classList.add("block", "text_center");
-        const DESCRIPTION_i = document.createElement("i");
-        DESCRIPTION_i.insertAdjacentText(
+        const DESCRIPTION = document.createElement("i");
+        DESCRIPTION.classList.add("block", "text_center");
+        DESCRIPTION.insertAdjacentText(
             "beforeend",
             localStorage.getItem("description")
         );
-        DESCRIPTION_p.insertAdjacentElement("beforeend", DESCRIPTION_i);
         const H6 = document.createElement("h6");
         H6.classList.add("text_center");
         H6.textContent = "Contenido academico";
@@ -88,7 +72,7 @@ function card_constructor() {
         [
             TITLE,
             IMG_BOX,
-            DESCRIPTION_p,
+            DESCRIPTION,
             H6,
             CONTENT,
             EDIT_BUTTON,
@@ -96,7 +80,32 @@ function card_constructor() {
         ].forEach((node) => CARD.insertAdjacentElement("beforeend", node));
         return CARD;
     } else alert("Debe llenar todos los campos para agregar un nuevo curso");
-}
+};
+
+async function gettCards() {
+    return await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(document.querySelectorAll(".card"))
+        }, 1500);
+    })
+};
+
+function filterCards(card,filters, objElems_arr) {
+    let coinicidencia = [];
+    filters.forEach(filter => { 
+        if (filter.value !== "") {
+            if (filter.value.toLowerCase() !== card.querySelector(objElems_arr[filters.indexOf(filter)]).textContent.toLowerCase()) {
+                card.classList.add("hidden")
+                coinicidencia.push(true)
+            } else {
+                card.classList.remove("hidden")
+            };
+        } else {
+            coinicidencia.push(false);
+        }
+    });
+    return coinicidencia
+};
 
 function updateButtons() {
     let edit_buttons = document.querySelectorAll("#edit_button");
@@ -151,13 +160,38 @@ function validarPrompt(msg) {
 
 FORM_BUTTON_CREATE.addEventListener("click", async () => {
     await gettData();
-    const ITEM = card_constructor();
-    SECTION.insertAdjacentElement("beforeend", ITEM);
+    const CARD = card_constructor();
+    SECTION.insertAdjacentElement("beforeend", CARD);
     updateButtons();
 });
 
 FORM_BUTTON_FILTER.addEventListener("click", async () => {
+    let cards = await gettCards();
+    const NAME_FILTER = document.querySelector("#name_q");
+    const DESCRP_FILTER = document.querySelector("#descr_q");
+    const CONTENT_FILTER = document.querySelector("#content_q");
+    cards.forEach(card => {
+        const coincidencas = filterCards(card,[NAME_FILTER,DESCRP_FILTER,CONTENT_FILTER],["span","i","p"]);
+        if (coincidencas.includes(true)) {
+            card.classList.add("hidden")
+        } else {
+            card.classList.remove("hidden")
+        }
+    })
+});
 
+CLEAR_BUTTON.addEventListener("click", async () => {
+    let cards = await gettCards();
+    const NAME_FILTER = document.querySelector("#name_q");
+    NAME_FILTER.value = "";
+    const DESCRP_FILTER = document.querySelector("#descr_q");
+    DESCRP_FILTER.value = "";
+    const CONTENT_FILTER = document.querySelector("#content_q");
+    CONTENT_FILTER.value = "";
+    cards.forEach(card => {
+        card.classList.remove("hidden")
+    })
 })
+
 updateButtons();
 colapse_details();
