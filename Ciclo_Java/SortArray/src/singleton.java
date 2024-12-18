@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Main {
+public class singleton {
     public static void main(String[] args) {
         String[] nomes = {"Pedro", "Mano", "bien", "alicia", "vin"};
 
